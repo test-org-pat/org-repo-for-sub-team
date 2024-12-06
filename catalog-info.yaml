@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: org-repo-for-sub-team
+  description: This is a test to check if the github app works
+  annotations:
+    tektonci/build-namespace: rhdh
+    backstage.io/kubernetes-id: org-repo-for-sub-team
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: test-org-pat/org-repo-for-sub-team
+spec:
+  type: api
+  system: system:default/janus-idp
+  lifecycle: production
+  owner: group:default/someteam-sub
